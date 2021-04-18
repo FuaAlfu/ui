@@ -5,18 +5,20 @@ const Click =  () => {
     const [password, setPassword] = useState('');
 
     const setInput = (set) => (e) =>{
-        Set(e.currentTarget.value);
+        set(e.currentTarget.value);
     }
 
     return (
       <form>
         <input
+        placeholder="username"
          value={username}
-         onchange={setInput(setUsername)}
+         onChange={setInput(setUsername)}
          />
          <input
+         placeholder="password"
          value={password}
-         onchange={setInput(setPassword)}
+         onChange={setInput(setPassword)}
          />
       </form>
     );
